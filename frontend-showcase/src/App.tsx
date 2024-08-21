@@ -46,11 +46,29 @@ function App() {
         price: productPrice,
       })
       .then((response) => {
+        resetForm()
         console.log("Product added successfully:", response.data);
         fetchProducts(); // Refresh the product list
       })
       .catch((error) => {
         console.error("There was an error adding the product!", error);
+      });
+  };
+
+  const resetForm = () => {
+    setProductName('');
+    setProductDescription('');
+    setProductPrice(0);
+  };
+
+  const deleteProduct = (id: number) => {
+    axios
+      .delete(`http://localhost:8000/api/products/${id}/`)
+      .then(() => {
+        setProducts(products.filter((product) => product.id !== id));
+      })
+      .catch((error) => {
+        console.error('There was an error deleting the product!', error);
       });
   };
 
@@ -91,6 +109,7 @@ function App() {
                     <br/>
                     Cost: {product.price}
                   </div>
+                  <button onClick={() => deleteProduct(product.id)}>Delete</button>
                 </li>
               ))}
             </ul>
