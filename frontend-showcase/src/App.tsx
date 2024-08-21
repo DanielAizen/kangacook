@@ -12,6 +12,14 @@ interface Product {
   price: number;
 }
 
+/**
+ * App Component
+ *
+ * The main component of the application. It manages the state for products,
+ * and provides functions to add products. The application is split into two 
+ * main sections: Product Management and the 3D Canvas.
+ */
+
 function App() {
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
