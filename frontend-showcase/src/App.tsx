@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import axios from "axios";
 import Cube from "./components/Cube";
-import "./App.css";
+import "./styles/App.css"
 
 interface Product {
   id: number;
@@ -90,6 +90,7 @@ function App() {
         </div>
         <div className="canvas-section">
           <h1>3D Object</h1>
+          <h3>Scroll to zoom in and out, click on the cube to change color</h3>
           <Canvas>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
