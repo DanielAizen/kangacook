@@ -31,10 +31,10 @@ This project is a fullstack application using React for the frontend and Django 
    pip install -r requirements.txt
    ```
    On macOS/Linux:
-    ```bash
+   ```bash
         python3 -m venv env
         source env/bin/activate
-        ```
+   ```
 
 ### Frontend (React)
  Navigate to the client Directory:
