@@ -69,6 +69,7 @@ Serve the React App Locally:
 ```bash
 npm start
 ```
+The frontend will be available at http://localhost:3000/
 
 
 ### Summary
